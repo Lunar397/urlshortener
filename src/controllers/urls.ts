@@ -22,8 +22,8 @@ export const addUrls = async (req:Request, res:Response) => {
 	const url : string = req.body.url
 	// To check whether the shorturl already exists or not
 	const urls = await getDocs(Urls)
-	const search = urls.docs.find(e => e.data().shorturl == req.body.shorturl)
-	const search2 = urls.docs.find(e => e.data().url == req.body.url)
+	const search = urls.docs.find(e => e.data().shorturl == shorturl)
+	const search2 = urls.docs.find(e => e.data().url == url)
 
 	if (search) return res.status(401).send('This shorturl already exists!')
 	if (search2) return res.status(401).send('You have shortened this url before!')
