@@ -16,6 +16,7 @@ export const getUrls = async (req:Request, res:Response) => {
 	const urls = await getDocs(Urls)
 	return res.json(urls.docs.map(e => e.data()))
 }
+// Adding the shorturl
 export const addUrls = async (req:Request, res:Response) => {
 	const shorturl :string = req.body.shorturl
 	const url : string = req.body.url
