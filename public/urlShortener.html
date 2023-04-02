@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrlShortener</title>
+    <link href="urlShortener.css" rel="stylesheet">
+</head>
+<body>
+    <form action="/api/url" method="post" class="form1">
+        <label>Enter the shorturl:</label>
+        <input type="text" name="shorturl">
+        <br>
+        <br>
+        <label>Enter the url:</label>
+        <input type="text" name="url" id="name" class="url">
+        <br>
+        <button type="submit">Submit url</button>
+    </form>
+    <form action="/api/url/delete" method="post" class="form2">
+        <label>Enter the shorturl that you want to delete:</label><br><input id="shorturl" name="shorturl" type="text">
+        <button type="submit">Delete</button>
+    </form>
+</body>
+
+<style>
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    align-content:center;
+    margin-top:10%;
+}
+input{
+    padding:1.0625rem;
+}
+label{
+    font-family:monospace;
+    font-size:25px;
+
+}
+.form1 input{
+    height:1.875rem;
+    width:100%;
+    font-size:1.25rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-style:solid;
+}
+.form1 button{
+    margin-left:30%;
+    height:3.75rem;
+    width:12.5rem;
+    border-radius:0.9375rem;
+    font-size:1.25rem;
+    font-family:monospace;
+    margin-top:3%;
+    background-color:rgb(171, 16, 173);
+    color:white;
+    transition:0.1s
+}
+.form2{
+    margin-top:4%;
+    margin-left:3%;
+}
+.form2 input{
+    height:1.875rem;
+    width:90%;
+    font-size:1.25rem;
+}
+.form2 button{
+    margin-left:28%;
+    height:3.75rem;
+    width:12.5rem;
+    border-radius:0.9375rem;
+    font-size:20px;
+    margin-top:3%;
+    background-color:rgb(171, 16, 173);
+    color:white;
+    transition:0.1s;
+    font-family:monospace;
+}
+
+button:hover{
+transform:scale(1.1);
+background-color: rgb(232, 26, 235);
+}
+</style>
+</html>
