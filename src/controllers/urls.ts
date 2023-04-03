@@ -11,7 +11,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 const Urls = collection(db, 'Url')
 
-// getting all the shorturls
+// Getting all the shorturls
 export const getUrls = async (req:Request, res:Response) => {
 	const urls = await getDocs(Urls)
 	return res.json(urls.docs.map(e => e.data()))
